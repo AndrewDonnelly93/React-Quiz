@@ -88,6 +88,11 @@ class Quiz extends Component {
         return this.state.activeQuestion + 1 === this.state.quiz.length;
     }
 
+    componentDidMount() {
+        console.log('Quiz ID = ', this.props.match.params.id);
+    }
+
+
     onQuizRetry = () => {
       this.setState({
           activeQuestion: 0,
@@ -96,6 +101,8 @@ class Quiz extends Component {
           results: {}
       })
     };
+
+
 
     render() {
         return (
